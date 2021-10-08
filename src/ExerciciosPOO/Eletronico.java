@@ -10,13 +10,21 @@ public class Eletronico {
 	long numeroModelo;
 	double preco;
 	double peso;
+
+	// construtores
+
 	
-			// construtores
 	
-	public Eletronico(String nome, double preco)
+	  public Eletronico(String nome, double preco) 
 	{
-		this.nome = nome;
-		this.preco = preco;
+	  this.nome = nome; 
+	  this.preco = preco; 
+	}
+	 
+
+	public Eletronico() 
+	{
+		
 	}
 
 	// Getters & Setters
