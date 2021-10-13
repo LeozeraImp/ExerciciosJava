@@ -4,10 +4,20 @@ public class Cachorro extends Animal{
 	
 	private String raca ;
 	
-	public Cachorro(String nome,int idade, String som, String raca)
+	public Cachorro() 
 	{
-		super(nome, som, idade);
-		this.raca = raca;
+		super("Cachorro");
+	}
+
+	@Override
+	 public void emitirSom()
+	 {
+		System.out.println("O som que esse animal emite e um latido");
+	 }
+	@Override
+	public void tipoDeMovimento()
+	{
+		System.out.println("Esse animal se move correndo em 4 patas");
 	}
 
 	public String getRaca() {

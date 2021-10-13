@@ -4,10 +4,21 @@ public class Preguica extends Animal{
 	
 	private String tamanhoUnha;
 	
-	public Preguica(String nome, String som, String tamanhoUnha, int idade)
+	public Preguica()
 	{
-		super(nome, som, idade);
-		this.tamanhoUnha = tamanhoUnha;
+		super("Preguica");
+	}
+	
+	
+	@Override
+	 public void emitirSom()
+	 {
+		System.out.println("O som que esse animal emite e um bocejo");
+	 }
+	@Override
+	public void tipoDeMovimento()
+	{
+		System.out.println("Esse animal se move subindo nas arvores com suas garras");
 	}
 
 	public String getTamanhoUnha() {

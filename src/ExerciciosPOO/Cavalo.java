@@ -4,10 +4,20 @@ public class Cavalo extends Animal{
 	
 	private String tipodeCor;
 	
-	public Cavalo(String nome, String som, String tipodeCor, int idade)
+	public Cavalo()
 	{
-		super(nome, som, idade);
-		this.tipodeCor = tipodeCor;
+		super("Cavalo");
+	}
+	
+	@Override
+	 public void emitirSom()
+	 {
+		System.out.println("O som que esse animal emite e um relincho");
+	 }
+	@Override
+	public void tipoDeMovimento()
+	{
+		System.out.println("Esse animal se move trotando em 4 patas");
 	}
 
 	public String getTipodeCor() {

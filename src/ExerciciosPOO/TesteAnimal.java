@@ -6,31 +6,36 @@ public class TesteAnimal {
 
 	public static void main(String[] args) {
 		
-		Animal cachorro = new Animal ("Cachorro", "Latido", 8);
-		Animal cavalo = new Animal ("Cavalo", "Relincha", 10);
-		Animal preguica = new Animal ("Preguica", "Boceja", 3);
+		Cachorro cachorro = new Cachorro();
+		Cavalo cavalo = new Cavalo ();
+		Preguica preguica = new Preguica ();
+		Animal animal = null;
 		
 		Scanner leia = new Scanner(System.in);
 		
 		int opcaoAnimal, opcaoRaca, opcaoCor, opcaoUnha ;
 		
 		System.out.println("\t\tSelecione um animal: \n"
-				+ "[1] --> Cachorro\n"
-				+ "[2] --> Cavalo\n"
-				+ "[3] --> Preguica");
+				+ "[0] --> Cachorro\n"
+				+ "[1] --> Cavalo\n"
+				+ "[2] --> Preguica");
 		opcaoAnimal = leia.nextInt();
 	
-	if(opcaoAnimal == 1)
+	if(opcaoAnimal == 0)
 	{
-		cachorro.ImprimirInfo();
+		cachorro.emitirSom();
+		cachorro.tipoDeMovimento();
+		
+	}
+	else if (opcaoAnimal == 1)
+	{
+		cavalo.emitirSom();
+		cavalo.tipoDeMovimento();
 	}
 	else if (opcaoAnimal == 2)
 	{
-		cavalo.ImprimirInfo();
-	}
-	else if (opcaoAnimal == 3)
-	{
-		preguica.ImprimirInfo();
+		preguica.emitirSom();
+		preguica.tipoDeMovimento();
 	}
 	else
 	{

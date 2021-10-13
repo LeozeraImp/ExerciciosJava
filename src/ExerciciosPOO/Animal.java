@@ -1,24 +1,25 @@
 package ExerciciosPOO;
 
-public class Animal {
+public abstract class Animal {
 	 // atributos
+	private String tipo;
 	private String nome;
 	private String emitirSom;
 	private int idade;
 	
+	abstract public void emitirSom();
+	abstract public void tipoDeMovimento();
 	// construtores
 	
-	public Animal (String nome, String emitirSom, int idade)
+	public Animal (String tipo)
 	{
-		this.nome = nome;
-		this.idade = idade;
-		this.emitirSom = emitirSom;
+		this.tipo = tipo;
+		
 	}
 	 // metodo
 	public void ImprimirInfo()
 	{
 		System.out.println("\nNome do animal: " + getNome()
-							+ "\nO som emitido do animal e: " + getEmitirSom()
 							+ "\nIdade do animal: " + getIdade());
 	}
 
@@ -45,5 +46,8 @@ public class Animal {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
+	
+	
+
 	
 }
